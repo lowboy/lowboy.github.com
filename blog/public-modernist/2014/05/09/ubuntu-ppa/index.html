@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>备份一些不错的ubuntu-ppa以及其他开源软件的地址 | 静心小筑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Lowboy">
+  
+  
+  <meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="备份一些不错的ubuntu-ppa以及其他开源软件的地址">
+<meta property="og:url" content="http://singaloud.tk/2014/05/09/ubuntu-ppa/">
+<meta property="og:image">
+<meta property="og:site_name" content="静心小筑">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="备份一些不错的ubuntu-ppa以及其他开源软件的地址">
+<meta name="twitter:description">
+  
+    <link rel="alternate" href="/atom.xml" title="静心小筑" type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">静心小筑</a></h1>
+    <p><a href="/">请让我一个人静静，虽然不静的时候, 也还是一个人。</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/05/09/ubuntu-ppa/">
+  <time datetime="2014-05-09T11:15:26.000Z">
+    2014年 05月09日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">备份一些不错的ubuntu-ppa以及其他开源软件的地址</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><a id="more"></a></p>
+<h2 id="什么是PPA？">什么是PPA？</h2>
+<p>PPA是<strong><code>personal package archive</code></strong>的缩写,即个人包档案.使用PPA,软件制作者可以轻松地发布软件,并且能够准确地对用户进行升级.Ubuntu用户使用PPA源将更加方便的获得软件的最新版本。<br>关于PPA的详细情况,可以参考：<a href="https://help.launchpad.net/Packaging/PPA" target="_blank">https://help.launchpad.net/Packaging/PPA</a></p>
+<h2 id="如何获得PPA？">如何获得PPA？</h2>
+<p>针对使用ubuntu的用户而言,访问这个网站  <a href="https://launchpad.net/" target="_blank">https://launchpad.net/</a>  ,搜索需要的软件,就可以得到该软件的PPA源.</p>
+<p>写这篇文章，主要是留着自己以后重装系统的时候方便取用。<br>下面罗列开始：</p>
+<h2 id="优秀软件">优秀软件</h2>
+<h3 id="Y_PPA_Manager"><font color="#ff0000">Y PPA Manager</font></h3>
+<p>&emsp;&emsp;这货其实现在是我重(shou)装(jian)系(zhe)统(teng)的第一必装，有了它，下面的所有话其实都能够省了。<br>当然，本着不能出师未捷身先死的精神，我还是要把下面的话写完。</p>
+<p>废话少说，上代码先</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="variable">$sudo</span> apt<span class="attribute">-get</span> repository ppa:webupd8team/y<span class="attribute">-ppa</span><span class="attribute">-manager</span>
+<span class="variable">$sudo</span> apt<span class="attribute">-get</span> update
+<span class="variable">$sudo</span> apt<span class="attribute">-get</span> install y<span class="attribute">-ppa</span><span class="attribute">-manager</span>
+</pre></td></tr></table></figure><br></br></p>
+<h3 id="apt-fast"><font color="#ff0000">apt-fast</font></h3>
+<p>&emsp;&emsp;在我认识<em><code>Y PPA Manager</code></em>之前，<em><code>apt-fast</code></em>曾经一度是我对新系统的第一个改动，现在虽然落到了第二，但仍然是我最常用、心目中最好的程序，没有之一。<br>也以至于我在编辑上面一段代码的时候，<em><code>apt-get</code></em>敲的无比别扭，因为我的手指早就习惯<em><code>apt-fast</code></em>啦！</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="variable">$sudo</span> apt<span class="attribute">-get</span> repository ppa:apt<span class="attribute">-fast</span>/stable
+<span class="variable">$sudo</span> apt<span class="attribute">-get</span> update
+<span class="variable">$sudo</span> apt<span class="attribute">-get</span> install apt<span class="attribute">-fast</span>
+</pre></td></tr></table></figure></p>
+<blockquote>
+<p>为了<strong><font color="#ff0000" size="5px">表示尊敬</font></strong>，下面的代码，我就都用<strong><code>apt-fast</code></strong>代替了。</p>
+</blockquote>
+<h3 id="ubuntu-tweak"><font color="#ff0000">ubuntu-tweak</font></h3>
+<p>&emsp;&emsp;身为一个tweak党，倘若不能tweak，那当真是浑身不舒服斯基。<br>&emsp;&emsp;ubuntu-tweak作为ubuntu系的linux里知名度最高也是最优秀的tweak软件之一，不需要我做太多的解释，超高的人气和装机量足以说明所有问题。<br>P.S.据说作者是国人，看着这软件在国外的高人气，想想就有些小激动呢～</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="variable">$sudo</span> apt<span class="attribute">-get</span> repository ppa:tualatrix/ppa
+<span class="variable">$sudo</span> apt<span class="attribute">-get</span> update
+<span class="variable">$sudo</span> apt<span class="attribute">-get</span> install ubuntu<span class="attribute">-tweak</span>
+</pre></td></tr></table></figure></p>
+<h3 id="深度音乐"><font color="#ff0000">深度音乐</font></h3>
+<p>&emsp;&emsp;终于有一个<strong>国产</strong>软件了！！！</p>
+<p>&emsp;&emsp;对于一个不具备黑客精神的人来说，linux中的音乐播放器确实有些蛋疼。<br>&emsp;&emsp;首先，命令行界面不是我的菜，毕竟咱是在玩音乐吧，多多少少得配合一点视觉上美的享受才好。<br>&emsp;&emsp;然后问题就来了，因为我不是一个只听英文歌的人，总有一大堆中文歌，当我看见他们躺在列表里堆成一坨坨的乱码，整个人都不好了。<br>&emsp;&emsp;<code>Rhythmbox</code>,<code>Banshee</code> 都是这样的问题，<code>Clemetine</code>,<code>Exaile</code>倒没有这种事，但是界面实在太简略了Orz<br>而另外，曾经让我眼睛一亮的<code>Songbird</code>又开发停滞了。<br>&emsp;&emsp;<code>amarok</code>倒是足够华丽，虽然依旧乱码，但至少拥有了也让我为其转tag编码的冲动。可是呢，我不在KDE环境啊！<code>amarok</code>离开她生长的环境之后，适应新世界的能力实在太差，她只能再给自己搭建一个一样的小窝才活得下去。为了安装她，我还要忍受一大堆没有用处的软件包。都说爱情要忍受另一半的一切，我只能说，这让我好一阵心动的<code>amarok</code>原来并不是真爱。<br>&emsp;&emsp;最后，就如<strong>《中国合伙人》</strong>中<strong>佟大为</strong>饰演的的<strong>王阳</strong>在浪荡了一辈子后，最后竟选了一个年轻时绝对不会注意的那个她一样。</p>
+<blockquote>
+<p>而我，则选择了<code>deepinmusic</code>,也即<code>深度音乐</code></p>
+</blockquote>
+<p>虽然很被geek看不上，不过默认设置下，她已有该有的一切：没有乱码、无缝播放、桌面歌词、桌面OSD提示、支持豆瓣FM插件、还能焕肤！于是，我就这样被征服了，也许这也就是岁月在我身上留下的改变吧～<br>&emsp;&emsp;不得不说，深度在XP时代，对于推动中国系统发展，发挥了不可估量的作用，现在由于版权问题转混开源界，也是华丽转身。</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="variable">$sudo</span> add-apt-repository ppa:noobslab/deepin-sc
+<span class="variable">$sudo</span> apt-fast update
+<span class="variable">$sudo</span> apt-fast install deepin-music-player
+</pre></td></tr></table></figure></p>
+<h2 id="当然，出了问题请访问:深度官方wiki"><p>当然，出了问题请访问:</p><a href="http://wiki.linuxdeepin.com/index.php?title=Deepin_Music_Player&amp;diff=cur&amp;oldid=6031" target="_blank">深度官方wiki</a></h2>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/PPA/">PPA</a>, <a class="tags-link" href="/tags/开源软件/">开源软件</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Lowboy</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var disqus_shortname = 'noonelove';
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<script src="/js/totop.js"></script>
+
+
+</body>
+</html>

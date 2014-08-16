@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>完美解决 Linux 下 Sublime Text 中文输入 | 静心小筑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Lowboy">
+  
+  
+  <meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="完美解决 Linux 下 Sublime Text 中文输入">
+<meta property="og:url" content="http://singaloud.tk/2014/05/06/完美解决-linux-下-sublime-text-中文输入/">
+<meta property="og:image">
+<meta property="og:site_name" content="静心小筑">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="完美解决 Linux 下 Sublime Text 中文输入">
+<meta name="twitter:description">
+  
+    <link rel="alternate" href="/atom.xml" title="静心小筑" type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">静心小筑</a></h1>
+    <p><a href="/">请让我一个人静静，虽然不静的时候, 也还是一个人。</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/05/06/完美解决-linux-下-sublime-text-中文输入/">
+  <time datetime="2014-05-06T11:36:59.000Z">
+    2014年 05月06日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">完美解决 Linux 下 Sublime Text 中文输入</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><a id="more"></a><br><em><em>声明：此文非原创，而是综合了若干人的工作而成</em><br><em>参考文章见文末</em></em></p>
+<hr>
+<h2 id="测试环境：">测试环境：</h2>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="tag">OS</span><span class="pseudo">:linuxmint16_x64(xfce)</span>
+<span class="tag">Fcitx</span><span class="pseudo">:4</span><span class="class">.2</span><span class="class">.8</span><span class="class">.3</span>
+<span class="tag">sublime_text</span><span class="pseudo">:3059</span>
+</pre></td></tr></table></figure></p>
+<h3 id="第一步">第一步</h3>
+<ul>
+<li>将下列代码保存为<code>subsublime-imfix.c</code><figure class="highlight c"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+</pre></td><td class="code"><pre><span class="comment">/*
+sublime-imfix.c
+Use LD_PRELOAD to interpose some function to fix sublime input method support for linux.
+By Cjacker Huang
+
+gcc -shared -o libsublime-imfix.so sublime-imfix.c `pkg-config --libs --cflags gtk+-2.0` -fPIC
+LD_PRELOAD=./libsublime-imfix.so subl
+*/</span>
+<span class="preprocessor">#include &lt;gtk/gtk.h&gt;</span>
+<span class="preprocessor">#include &lt;gdk/gdkx.h&gt;</span>
+<span class="keyword">typedef</span> GdkSegment GdkRegionBox;
+
+<span class="keyword">struct</span> _GdkRegion
+{
+  <span class="keyword">long</span> size;
+  <span class="keyword">long</span> numRects;
+  GdkRegionBox *rects;
+  GdkRegionBox extents;
+};
+
+GtkIMContext *local_context;
+
+<span class="keyword">void</span>
+gdk_region_get_clipbox (<span class="keyword">const</span> GdkRegion *region,
+            GdkRectangle    *rectangle)
+{
+  g_return_if_fail (region != NULL);
+  g_return_if_fail (rectangle != NULL);
+
+  rectangle-&gt;x = region-&gt;extents.x1;
+  rectangle-&gt;y = region-&gt;extents.y1;
+  rectangle-&gt;width = region-&gt;extents.x2 - region-&gt;extents.x1;
+  rectangle-&gt;height = region-&gt;extents.y2 - region-&gt;extents.y1;
+  GdkRectangle rect;
+  rect.x = rectangle-&gt;x;
+  rect.y = rectangle-&gt;y;
+  rect.width = <span class="number">0</span>;
+  rect.height = rectangle-&gt;height;
+  <span class="comment">//The caret width is 2;</span>
+  <span class="comment">//Maybe sometimes we will make a mistake, but for most of the time, it should be the caret.</span>
+  <span class="keyword">if</span>(rectangle-&gt;width == <span class="number">2</span> && GTK_IS_IM_CONTEXT(local_context)) {
+        gtk_im_context_set_cursor_location(local_context, rectangle);
+  }
+}
+
+<span class="comment">//this is needed, for example, if you input something in file dialog and return back the edit area</span>
+<span class="comment">//context will lost, so here we set it again.</span>
+
+<span class="keyword">static</span> GdkFilterReturn event_filter (GdkXEvent *xevent, GdkEvent *event, gpointer im_context)
+{
+    XEvent *xev = (XEvent *)xevent;
+    <span class="keyword">if</span>(xev-&gt;type == KeyRelease && GTK_IS_IM_CONTEXT(im_context)) {
+       GdkWindow * win = g_object_get_data(G_OBJECT(im_context),<span class="string">"window"</span>);
+       <span class="keyword">if</span>(GDK_IS_WINDOW(win))
+         gtk_im_context_set_client_window(im_context, win);
+    }
+    <span class="keyword">return</span> GDK_FILTER_CONTINUE;
+}
+
+<span class="keyword">void</span> gtk_im_context_set_client_window (GtkIMContext *context,
+          GdkWindow    *window)
+{
+  GtkIMContextClass *klass;
+  g_return_if_fail (GTK_IS_IM_CONTEXT (context));
+  klass = GTK_IM_CONTEXT_GET_CLASS (context);
+  <span class="keyword">if</span> (klass-&gt;set_client_window)
+    klass-&gt;set_client_window (context, window);
+
+  <span class="keyword">if</span>(!GDK_IS_WINDOW (window))
+    <span class="keyword">return</span>;
+  g_object_set_data(G_OBJECT(context),<span class="string">"window"</span>,window);
+  <span class="keyword">int</span> width = gdk_window_get_width(window);
+  <span class="keyword">int</span> height = gdk_window_get_height(window);
+  <span class="keyword">if</span>(width != <span class="number">0</span> && height !=<span class="number">0</span>) {
+    gtk_im_context_focus_in(context);
+    local_context = context;
+  }
+  gdk_window_add_filter (window, event_filter, context);
+}
+</pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="第二步">第二步</h3>
+<ul>
+<li>安装 <code>C/C++ 的编译环境</code>和 <code>gtk libgtk2.0-dev</code></li>
+</ul>
+<h2 id="2"><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$sudo</span> apt<span class="attribute">-get</span> install build<span class="attribute">-essential</span> libgtk2<span class="number">.0</span><span class="attribute">-dev</span>
+</pre></td></tr></table></figure></h2>
+<h3 id="第三步">第三步</h3>
+<ul>
+<li>编译共享内<del><font size="3px" color="#ff0000">裤</font></del>库</li>
+</ul>
+<h2 id="3"><figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$gcc</span> <span class="attribute">-shared</span> <span class="attribute">-o</span> libsublime<span class="attribute">-imfix</span><span class="built_in">.</span>so sublime<span class="attribute">-imfix</span><span class="built_in">.</span>c <span class="string">`pkg-config --libs --cflags gtk+-2.0`</span> <span class="attribute">-fPIC</span>
+</pre></td></tr></table></figure></h2>
+<h3 id="第四步">第四步</h3>
+<ul>
+<li>设置 LD_PRELOAD 并启动 Sublime Text<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$LD_PRELOAD</span><span class="subst">=</span><span class="built_in">.</span>/libsublime<span class="attribute">-imfix</span><span class="built_in">.</span>so subl
+</pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="第五步">第五步</h3>
+<ul>
+<li><font color="#ff0000"><em>一定要记得</em></font>把<code>libsublime-imfix.so</code>放到<code>/opt/sublime_text/</code>中</li>
+</ul>
+<hr>
+<h3 id="第六步">第六步</h3>
+<ul>
+<li>修改<code>/usr/share/applications/sublime_text.desktop</code><br>修改前，文件示例：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="code"><pre><span class="title">[Desktop Entry]</span>
+<span class="setting">Version=<span class="value"><span class="number">1.0</span></span></span>
+<span class="setting">Type=<span class="value">Application</span></span>
+<span class="setting">Name=<span class="value">Sublime Text</span></span>
+<span class="setting">GenericName=<span class="value">Text Editor</span></span>
+<span class="setting">Comment=<span class="value">Sophisticated text editor for code, markup and prose</span></span>
+<span class="setting">Exec=<span class="value">/opt/sublime_text/sublime_text %F</span></span>
+<span class="setting">Terminal=<span class="value"><span class="keyword">false</span></span></span>
+<span class="setting">MimeType=<span class="value">text/plain;</span></span>
+<span class="setting">Icon=<span class="value">sublime-text</span></span>
+<span class="setting">Categories=<span class="value">TextEditor;Development;</span></span>
+<span class="setting">StartupNotify=<span class="value"><span class="keyword">true</span></span></span>
+<span class="setting">Actions=<span class="value">Window;Document;</span></span>
+
+<span class="title">[Desktop Action Window]</span>
+<span class="setting">Name=<span class="value">New Window</span></span>
+<span class="setting">Exec=<span class="value">/opt/sublime_text/sublime_text -n</span></span>
+<span class="setting">OnlyShowIn=<span class="value">Unity;</span></span>
+
+<span class="title">[Desktop Action Document]</span>
+<span class="setting">Name=<span class="value">New File</span></span>
+<span class="setting">Exec=<span class="value">/opt/sublime_text/sublime_text --command new_file</span></span>
+<span class="setting">OnlyShowIn=<span class="value">Unity;</span></span>
+</pre></td></tr></table></figure><br>然后在每一个<code>Exec=</code>后添加上这一句<blockquote>
+<p><code>env LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so</code> </p>
+</blockquote>
+</li>
+</ul>
+<p>修改后，应该是这个样子：</p>
+<h2 id="6"><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="code"><pre>[Desktop Entry]
+Version=<span class="number">1.0</span>
+Type=Application
+Name=Sublime Text
+GenericName=Text Editor
+Comment=Sophisticated text editor <span class="keyword">for</span> code, markup and prose
+Exec=env LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so /opt/sublime_text/sublime_text %F
+Terminal=<span class="literal">false</span>
+MimeType=text/plain;
+Icon=sublime-text
+Categories=TextEditor;Development;
+StartupNotify=<span class="literal">true</span>
+Actions=Window;Document;
+
+[Desktop Action Window]
+Name=New Window
+Exec=env LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so /opt/sublime_text/sublime_text -n
+OnlyShowIn=Unity;
+
+[Desktop Action Document]
+Name=New File
+Exec=env LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so /opt/sublime_text/sublime_text --command new_file
+OnlyShowIn=Unity;
+</pre></td></tr></table></figure></h2>
+<h3 id="第七步">第七步</h3>
+<p>修改<code>/usr/bin/subl</code>为</p>
+<pre><code><span class="shebang">#!/bin/sh</span>
+<span class="keyword">export</span> LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so
+<span class="keyword">exec</span> /opt/sublime_text/sublime_text <span class="string">"<span class="variable">$@</span>"</span>
+</code></pre><hr>
+<p>Congratulations！<br>做完了以上这些，你就可以享受sublime和fcitx的无间配合啦！</p>
+<hr>
+<p>参考文章:<br><a href="https://www.sinosky.org/linux-sublime-text-fcitx.html" target="_blank">1. 完美解决 Linux 下 Sublime Text 中文输入  by  Jat</a></p>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/fcitx/">fcitx</a>, <a class="tags-link" href="/tags/linux/">linux</a>, <a class="tags-link" href="/tags/sublime/">sublime</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Lowboy</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var disqus_shortname = 'noonelove';
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<script src="/js/totop.js"></script>
+
+
+</body>
+</html>
