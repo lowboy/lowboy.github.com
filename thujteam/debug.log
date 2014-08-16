@@ -1,0 +1,483 @@
+date: 2014-05-17 15:42:47.287
+argv: nodejs /usr/local/bin/hexo g
+os: Linux 3.11.0-12-generic linux x64
+version:
+  hexo: 2.5.6
+  http_parser: 1.0
+  node: 0.10.15
+  v8: 3.14.5.8
+  ares: 1.10.0
+  uv: 0.10.13
+  zlib: 1.2.8
+  modules: 11
+  openssl: 1.0.1e
+---
+
+[debug] 15:42:46.178 Config file loaded
+[debug] 15:42:46.180 Version info checked successfully
+[debug] 15:42:46.252 Plugin loaded successfully: hexo-generator-feed
+[debug] 15:42:46.255 Plugin loaded successfully: hexo-tag-bootstrap
+[debug] 15:42:46.318 Processed: CNAME
+[debug] 15:42:46.321 Processed: 秩序册.doc
+[debug] 15:42:46.325 Processed: LICENSE
+[debug] 15:42:46.325 Processed: README.md
+[debug] 15:42:46.380 Processed: source/css/bootstrap-responsive.css
+[debug] 15:42:46.381 Processed: source/css/bootstrap.min.css
+[debug] 15:42:46.381 Processed: source/css/font-awesome.css
+[debug] 15:42:46.388 Processed: source/css/highlight.css
+[debug] 15:42:46.388 Processed: source/css/responsive.css
+[debug] 15:42:46.391 Processed: source/css/style.css
+[debug] 15:42:46.393 Processed: source/fancybox/blank.gif
+[debug] 15:42:46.393 Processed: source/fancybox/fancybox_loading.gif
+[debug] 15:42:46.397 Processed: source/fancybox/fancybox_loading@2x.gif
+[debug] 15:42:46.398 Processed: source/fancybox/fancybox_overlay.png
+[debug] 15:42:46.399 Processed: source/fancybox/fancybox_sprite.png
+[debug] 15:42:46.446 Processed: source/fancybox/fancybox_sprite@2x.png
+[debug] 15:42:46.447 Processed: source/fancybox/jquery.fancybox.css
+[debug] 15:42:46.448 Processed: source/fancybox/jquery.fancybox.pack.js
+[debug] 15:42:46.448 Processed: source/fonts/FontAwesome.otf
+[debug] 15:42:46.449 Processed: source/fonts/fontawesome-webfont.eot
+[debug] 15:42:46.453 Processed: source/fonts/fontawesome-webfont.svg
+[debug] 15:42:46.453 Processed: source/fonts/fontawesome-webfont.ttf
+[debug] 15:42:46.454 Processed: source/fonts/fontawesome-webfont.woff
+[debug] 15:42:46.455 Processed: source/img/github-sprite.png
+[debug] 15:42:46.455 Processed: source/img/glyphicons-halflings-white.png
+[debug] 15:42:46.456 Processed: source/img/glyphicons-halflings.png
+[debug] 15:42:46.457 Processed: source/img/jteam-wx.jpg
+[debug] 15:42:46.458 Processed: source/img/thujteam-wx.png
+[debug] 15:42:46.459 Processed: source/js/bootstrap.min.js
+[debug] 15:42:46.460 Processed: source/js/gallery.js
+[debug] 15:42:46.460 Processed: source/js/jquery-2.0.3.min.js
+[debug] 15:42:46.461 Processed: source/js/jquery.imagesloaded.min.js
+[debug] 15:42:46.462 Processed: source/js/main.js
+[debug] 15:42:46.504 Theme config loaded
+[debug] 15:42:46.504 Processed: _config.yml
+[debug] 15:42:46.504 Processed: languages/default.yml
+[debug] 15:42:46.506 Processed: languages/zh-CN.yml
+[debug] 15:42:46.506 Processed: languages/zh-TW.yml
+[debug] 15:42:46.507 Processed: layout/archive.ejs
+[debug] 15:42:46.507 Processed: layout/categories.ejs
+[debug] 15:42:46.507 Processed: layout/category.ejs
+[debug] 15:42:46.507 Processed: layout/index.ejs
+[debug] 15:42:46.507 Processed: layout/layout.ejs
+[debug] 15:42:46.507 Processed: layout/page.ejs
+[debug] 15:42:46.508 Processed: layout/post.ejs
+[debug] 15:42:46.508 Processed: layout/tag.ejs
+[debug] 15:42:46.508 Processed: layout/tags.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/category.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/links.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/recent_posts.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/search.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/tagcloud.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/after_footer.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/archive.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/article.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/footer.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/head.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/index.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/index_pagination.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/navigation.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/sidebar.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/category.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/comment.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/entry.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/google_analytics.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/meta.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/pagination.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/share.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/slogan.ejs
+[debug] 15:42:46.716 Processed: layout/_partial/post/tag.ejs
+[debug] 15:42:46.716 Processed: layout/_partial/post/title.ejs
+[debug] 15:42:46.722 Processed: 404.html
+[debug] 15:42:46.916 Processed: _posts/oldphotos.md
+[debug] 15:42:46.916 Processed: _posts/match.md
+[debug] 15:42:46.916 Processed: _posts/weixin.md
+[debug] 15:42:46.916 Processed: _posts/wishes.md
+[info] 15:42:47.073 Files loaded in 0.816s
+[debug] 15:42:47.076 Cache saved
+[debug] 15:42:47.077 Public folder not exists. No need to clear public folder.
+[debug] 15:42:47.078 Render archive: archives/
+[debug] 15:42:47.081 Render archive: archives/2014/
+[debug] 15:42:47.081 Render archive: archives/2014/05/
+[debug] 15:42:47.081 Render archive: archives/2333/
+[debug] 15:42:47.082 Render archive: archives/2333/05/
+[debug] 15:42:47.082 Render category: categories/照片/
+[debug] 15:42:47.082 Render category: categories/微信/
+[debug] 15:42:47.082 Render index: 
+[debug] 15:42:47.082 Render page: 404.html
+[debug] 15:42:47.083 Render post: 2333/05/17/weixin/
+[debug] 15:42:47.083 Render post: 2014/05/17/match/
+[debug] 15:42:47.083 Render post: 2014/05/16/wishes/
+[debug] 15:42:47.084 Render post: 2014/05/16/oldphotos/
+[debug] 15:42:47.084 Render tag: tags/照片/
+[debug] 15:42:47.084 Render tag: tags/平台，微信，人人/
+[debug] 15:42:47.084 Render tag: tags/祝福/
+[error] 15:42:47.236 HexoError: Render failed: 2333/05/17/weixin/index.html
+TypeError: /home/jeffrey/thujteam/themes/freemind/layout/post.ejs:3
+    1| <% page.comment = true; %>
+    2| 
+ >> 3| <%- partial('_partial/article', {item: page, post: true}) %>
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/article.ejs:29
+    27| 	
+    28| 	<!-- comment -->
+ >> 29| 	<%- partial('post/comment', {page: item}) %>
+    30| 	
+    31| 	</div> <!-- col-md-9/col-md-12 -->
+    32| 	
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/post/comment.ejs:15
+    13|   <% } %>
+    14| <script type="text/javascript">
+ >> 15|   var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
+    16|   (function() {
+    17|     var ds = document.createElement('script');
+    18|     ds.type = 'text/javascript';ds.async = true;
+
+Cannot read property 'short_name' of undefined
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:581)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1024)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:255:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:293:13)
+    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/core/render.js:133:12)
+    at View.renderSync (/usr/local/lib/node_modules/hexo/lib/theme/view.js:183:28)
+    at Object.module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:19:17)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:989)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:1259)
+
+[error] 15:42:47.240 HexoError: Render failed: 2014/05/17/match/index.html
+TypeError: /home/jeffrey/thujteam/themes/freemind/layout/post.ejs:3
+    1| <% page.comment = true; %>
+    2| 
+ >> 3| <%- partial('_partial/article', {item: page, post: true}) %>
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/article.ejs:29
+    27| 	
+    28| 	<!-- comment -->
+ >> 29| 	<%- partial('post/comment', {page: item}) %>
+    30| 	
+    31| 	</div> <!-- col-md-9/col-md-12 -->
+    32| 	
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/post/comment.ejs:15
+    13|   <% } %>
+    14| <script type="text/javascript">
+ >> 15|   var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
+    16|   (function() {
+    17|     var ds = document.createElement('script');
+    18|     ds.type = 'text/javascript';ds.async = true;
+
+Cannot read property 'short_name' of undefined
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:581)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1024)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:255:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:293:13)
+    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/core/render.js:133:12)
+    at View.renderSync (/usr/local/lib/node_modules/hexo/lib/theme/view.js:183:28)
+    at Object.module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:19:17)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:989)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:1259)
+
+[error] 15:42:47.244 HexoError: Render failed: 2014/05/16/wishes/index.html
+TypeError: /home/jeffrey/thujteam/themes/freemind/layout/post.ejs:3
+    1| <% page.comment = true; %>
+    2| 
+ >> 3| <%- partial('_partial/article', {item: page, post: true}) %>
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/article.ejs:29
+    27| 	
+    28| 	<!-- comment -->
+ >> 29| 	<%- partial('post/comment', {page: item}) %>
+    30| 	
+    31| 	</div> <!-- col-md-9/col-md-12 -->
+    32| 	
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/post/comment.ejs:15
+    13|   <% } %>
+    14| <script type="text/javascript">
+ >> 15|   var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
+    16|   (function() {
+    17|     var ds = document.createElement('script');
+    18|     ds.type = 'text/javascript';ds.async = true;
+
+Cannot read property 'short_name' of undefined
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:581)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1024)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:255:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:293:13)
+    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/core/render.js:133:12)
+    at View.renderSync (/usr/local/lib/node_modules/hexo/lib/theme/view.js:183:28)
+    at Object.module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:19:17)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:989)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:1259)
+
+[error] 15:42:47.249 HexoError: Render failed: 2014/05/16/oldphotos/index.html
+TypeError: /home/jeffrey/thujteam/themes/freemind/layout/post.ejs:3
+    1| <% page.comment = true; %>
+    2| 
+ >> 3| <%- partial('_partial/article', {item: page, post: true}) %>
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/article.ejs:29
+    27| 	
+    28| 	<!-- comment -->
+ >> 29| 	<%- partial('post/comment', {page: item}) %>
+    30| 	
+    31| 	</div> <!-- col-md-9/col-md-12 -->
+    32| 	
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/post/comment.ejs:15
+    13|   <% } %>
+    14| <script type="text/javascript">
+ >> 15|   var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
+    16|   (function() {
+    17|     var ds = document.createElement('script');
+    18|     ds.type = 'text/javascript';ds.async = true;
+
+Cannot read property 'short_name' of undefined
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:581)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1024)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:255:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:293:13)
+    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/core/render.js:133:12)
+    at View.renderSync (/usr/local/lib/node_modules/hexo/lib/theme/view.js:183:28)
+    at Object.module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:19:17)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:989)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:1259)
+[debug] 15:42:46.178 Config file loaded
+[debug] 15:42:46.180 Version info checked successfully
+[debug] 15:42:46.252 Plugin loaded successfully: hexo-generator-feed
+[debug] 15:42:46.255 Plugin loaded successfully: hexo-tag-bootstrap
+[debug] 15:42:46.318 Processed: CNAME
+[debug] 15:42:46.321 Processed: 秩序册.doc
+[debug] 15:42:46.325 Processed: LICENSE
+[debug] 15:42:46.325 Processed: README.md
+[debug] 15:42:46.380 Processed: source/css/bootstrap-responsive.css
+[debug] 15:42:46.381 Processed: source/css/bootstrap.min.css
+[debug] 15:42:46.381 Processed: source/css/font-awesome.css
+[debug] 15:42:46.388 Processed: source/css/highlight.css
+[debug] 15:42:46.388 Processed: source/css/responsive.css
+[debug] 15:42:46.391 Processed: source/css/style.css
+[debug] 15:42:46.393 Processed: source/fancybox/blank.gif
+[debug] 15:42:46.393 Processed: source/fancybox/fancybox_loading.gif
+[debug] 15:42:46.397 Processed: source/fancybox/fancybox_loading@2x.gif
+[debug] 15:42:46.398 Processed: source/fancybox/fancybox_overlay.png
+[debug] 15:42:46.399 Processed: source/fancybox/fancybox_sprite.png
+[debug] 15:42:46.446 Processed: source/fancybox/fancybox_sprite@2x.png
+[debug] 15:42:46.447 Processed: source/fancybox/jquery.fancybox.css
+[debug] 15:42:46.448 Processed: source/fancybox/jquery.fancybox.pack.js
+[debug] 15:42:46.448 Processed: source/fonts/FontAwesome.otf
+[debug] 15:42:46.449 Processed: source/fonts/fontawesome-webfont.eot
+[debug] 15:42:46.453 Processed: source/fonts/fontawesome-webfont.svg
+[debug] 15:42:46.453 Processed: source/fonts/fontawesome-webfont.ttf
+[debug] 15:42:46.454 Processed: source/fonts/fontawesome-webfont.woff
+[debug] 15:42:46.455 Processed: source/img/github-sprite.png
+[debug] 15:42:46.455 Processed: source/img/glyphicons-halflings-white.png
+[debug] 15:42:46.456 Processed: source/img/glyphicons-halflings.png
+[debug] 15:42:46.457 Processed: source/img/jteam-wx.jpg
+[debug] 15:42:46.458 Processed: source/img/thujteam-wx.png
+[debug] 15:42:46.459 Processed: source/js/bootstrap.min.js
+[debug] 15:42:46.460 Processed: source/js/gallery.js
+[debug] 15:42:46.460 Processed: source/js/jquery-2.0.3.min.js
+[debug] 15:42:46.461 Processed: source/js/jquery.imagesloaded.min.js
+[debug] 15:42:46.462 Processed: source/js/main.js
+[debug] 15:42:46.504 Theme config loaded
+[debug] 15:42:46.504 Processed: _config.yml
+[debug] 15:42:46.504 Processed: languages/default.yml
+[debug] 15:42:46.506 Processed: languages/zh-CN.yml
+[debug] 15:42:46.506 Processed: languages/zh-TW.yml
+[debug] 15:42:46.507 Processed: layout/archive.ejs
+[debug] 15:42:46.507 Processed: layout/categories.ejs
+[debug] 15:42:46.507 Processed: layout/category.ejs
+[debug] 15:42:46.507 Processed: layout/index.ejs
+[debug] 15:42:46.507 Processed: layout/layout.ejs
+[debug] 15:42:46.507 Processed: layout/page.ejs
+[debug] 15:42:46.508 Processed: layout/post.ejs
+[debug] 15:42:46.508 Processed: layout/tag.ejs
+[debug] 15:42:46.508 Processed: layout/tags.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/category.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/links.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/recent_posts.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/search.ejs
+[debug] 15:42:46.508 Processed: layout/_widget/tagcloud.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/after_footer.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/archive.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/article.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/footer.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/head.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/index.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/index_pagination.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/navigation.ejs
+[debug] 15:42:46.509 Processed: layout/_partial/sidebar.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/category.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/comment.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/entry.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/google_analytics.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/meta.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/pagination.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/share.ejs
+[debug] 15:42:46.510 Processed: layout/_partial/post/slogan.ejs
+[debug] 15:42:46.716 Processed: layout/_partial/post/tag.ejs
+[debug] 15:42:46.716 Processed: layout/_partial/post/title.ejs
+[debug] 15:42:46.722 Processed: 404.html
+[debug] 15:42:46.916 Processed: _posts/oldphotos.md
+[debug] 15:42:46.916 Processed: _posts/match.md
+[debug] 15:42:46.916 Processed: _posts/weixin.md
+[debug] 15:42:46.916 Processed: _posts/wishes.md
+[info] 15:42:47.073 Files loaded in 0.816s
+[debug] 15:42:47.076 Cache saved
+[debug] 15:42:47.077 Public folder not exists. No need to clear public folder.
+[debug] 15:42:47.078 Render archive: archives/
+[debug] 15:42:47.081 Render archive: archives/2014/
+[debug] 15:42:47.081 Render archive: archives/2014/05/
+[debug] 15:42:47.081 Render archive: archives/2333/
+[debug] 15:42:47.082 Render archive: archives/2333/05/
+[debug] 15:42:47.082 Render category: categories/照片/
+[debug] 15:42:47.082 Render category: categories/微信/
+[debug] 15:42:47.082 Render index: 
+[debug] 15:42:47.082 Render page: 404.html
+[debug] 15:42:47.083 Render post: 2333/05/17/weixin/
+[debug] 15:42:47.083 Render post: 2014/05/17/match/
+[debug] 15:42:47.083 Render post: 2014/05/16/wishes/
+[debug] 15:42:47.084 Render post: 2014/05/16/oldphotos/
+[debug] 15:42:47.084 Render tag: tags/照片/
+[debug] 15:42:47.084 Render tag: tags/平台，微信，人人/
+[debug] 15:42:47.084 Render tag: tags/祝福/
+[error] 15:42:47.236 HexoError: Render failed: 2333/05/17/weixin/index.html
+TypeError: /home/jeffrey/thujteam/themes/freemind/layout/post.ejs:3
+    1| <% page.comment = true; %>
+    2| 
+ >> 3| <%- partial('_partial/article', {item: page, post: true}) %>
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/article.ejs:29
+    27| 	
+    28| 	<!-- comment -->
+ >> 29| 	<%- partial('post/comment', {page: item}) %>
+    30| 	
+    31| 	</div> <!-- col-md-9/col-md-12 -->
+    32| 	
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/post/comment.ejs:15
+    13|   <% } %>
+    14| <script type="text/javascript">
+ >> 15|   var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
+    16|   (function() {
+    17|     var ds = document.createElement('script');
+    18|     ds.type = 'text/javascript';ds.async = true;
+
+Cannot read property 'short_name' of undefined
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:581)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1024)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:255:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:293:13)
+    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/core/render.js:133:12)
+    at View.renderSync (/usr/local/lib/node_modules/hexo/lib/theme/view.js:183:28)
+    at Object.module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:19:17)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:989)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:1259)
+
+[error] 15:42:47.240 HexoError: Render failed: 2014/05/17/match/index.html
+TypeError: /home/jeffrey/thujteam/themes/freemind/layout/post.ejs:3
+    1| <% page.comment = true; %>
+    2| 
+ >> 3| <%- partial('_partial/article', {item: page, post: true}) %>
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/article.ejs:29
+    27| 	
+    28| 	<!-- comment -->
+ >> 29| 	<%- partial('post/comment', {page: item}) %>
+    30| 	
+    31| 	</div> <!-- col-md-9/col-md-12 -->
+    32| 	
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/post/comment.ejs:15
+    13|   <% } %>
+    14| <script type="text/javascript">
+ >> 15|   var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
+    16|   (function() {
+    17|     var ds = document.createElement('script');
+    18|     ds.type = 'text/javascript';ds.async = true;
+
+Cannot read property 'short_name' of undefined
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:581)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1024)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:255:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:293:13)
+    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/core/render.js:133:12)
+    at View.renderSync (/usr/local/lib/node_modules/hexo/lib/theme/view.js:183:28)
+    at Object.module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:19:17)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:989)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:1259)
+
+[error] 15:42:47.244 HexoError: Render failed: 2014/05/16/wishes/index.html
+TypeError: /home/jeffrey/thujteam/themes/freemind/layout/post.ejs:3
+    1| <% page.comment = true; %>
+    2| 
+ >> 3| <%- partial('_partial/article', {item: page, post: true}) %>
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/article.ejs:29
+    27| 	
+    28| 	<!-- comment -->
+ >> 29| 	<%- partial('post/comment', {page: item}) %>
+    30| 	
+    31| 	</div> <!-- col-md-9/col-md-12 -->
+    32| 	
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/post/comment.ejs:15
+    13|   <% } %>
+    14| <script type="text/javascript">
+ >> 15|   var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
+    16|   (function() {
+    17|     var ds = document.createElement('script');
+    18|     ds.type = 'text/javascript';ds.async = true;
+
+Cannot read property 'short_name' of undefined
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:581)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1024)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:255:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:293:13)
+    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/core/render.js:133:12)
+    at View.renderSync (/usr/local/lib/node_modules/hexo/lib/theme/view.js:183:28)
+    at Object.module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:19:17)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:989)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:1259)
+
+[error] 15:42:47.249 HexoError: Render failed: 2014/05/16/oldphotos/index.html
+TypeError: /home/jeffrey/thujteam/themes/freemind/layout/post.ejs:3
+    1| <% page.comment = true; %>
+    2| 
+ >> 3| <%- partial('_partial/article', {item: page, post: true}) %>
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/article.ejs:29
+    27| 	
+    28| 	<!-- comment -->
+ >> 29| 	<%- partial('post/comment', {page: item}) %>
+    30| 	
+    31| 	</div> <!-- col-md-9/col-md-12 -->
+    32| 	
+
+/home/jeffrey/thujteam/themes/freemind/layout/_partial/post/comment.ejs:15
+    13|   <% } %>
+    14| <script type="text/javascript">
+ >> 15|   var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
+    16|   (function() {
+    17|     var ds = document.createElement('script');
+    18|     ds.type = 'text/javascript';ds.async = true;
+
+Cannot read property 'short_name' of undefined
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:581)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1024)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:255:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:293:13)
+    at module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/core/render.js:133:12)
+    at View.renderSync (/usr/local/lib/node_modules/hexo/lib/theme/view.js:183:28)
+    at Object.module.exports (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:19:17)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:989)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:29:1259)
